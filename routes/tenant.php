@@ -7,7 +7,7 @@ use Stancl\Tenancy\Middleware\InitializeTenancyByDomain;
 use Stancl\Tenancy\Middleware\PreventAccessFromCentralDomains;
 use App\Http\Controllers\App\{ 
     ProfileController, UserController };
-  
+
 
 
 
@@ -33,7 +33,7 @@ Route::middleware([
     });
 
     Route::get('/dashboard', function () {
-        return view('app.dashboard');
+        return view('app.dashboardTenant');
     })->middleware(['auth', 'verified'])->name('dashboard');
     
     Route::middleware('auth')->group(function () {

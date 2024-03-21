@@ -19,7 +19,7 @@
                 <div class="slide-controls">
                     <input type="radio" name="slide" id="login">
                     <input type="radio" name="slide" id="signup" checked>
-                    <label for="login" class="slide login">Login</label>
+                    <label for="login" class="slide login"><a href="{{ route('login') }}">Login</a></label>
                     <label for="signup" class="slide signup">Signup</label>
                     <div class="slider-tab"></div>
                 </div>

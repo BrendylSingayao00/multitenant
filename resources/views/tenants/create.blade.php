@@ -1,39 +1,7 @@
 @extends('dashboard')
 
 @section('content')
-<style>
-input {
-    padding: 6px 12px;
-    font-size: 16px;
-    font-weight: 400;
-    width: 800px;
-    line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    appearance: none;
-    border-radius: 4px;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    display: block;
 
-    :focus {
-        color: #212529;
-        background-color: #fff;
-        border-color: #86b7fe;
-        outline: 0;
-        box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
-    }
-}
-
-.addTenant {
-    padding-right: 30px;
-}
-
-.formaddTenant {
-    margin-left: 50px;
-}
-</style>
 <main>
     <div class="head-title">
         <div class="left">
@@ -48,7 +16,7 @@ input {
                 </li>
             </ul>
         </div>
-        <div class="table-data">
+        <div class="table-data ">
             <div class="order addTenant">
                 <div class="head">
                     <h3>Add Tenant</h3>
@@ -60,7 +28,7 @@ input {
                         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                             <div class="py-12">
                                 <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                                    <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                                    <div class="bg-light overflow-hidden shadow-sm sm:rounded-lg">
                                         <div class="p-6 text-gray-900">
 
                                             <form method="POST" action="{{ route('tenants.store') }}">

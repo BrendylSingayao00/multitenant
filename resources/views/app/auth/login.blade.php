@@ -8,7 +8,7 @@
         <!-- Email Address -->
         <div style="margin:5px;">
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full inputForm" type="email" name="email" :value="old('email')"
+            <x-text-input id="email" class="block mt-1 inputForm" type="email" name="email" :value="old('email')"
                 required autofocus autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
@@ -32,17 +32,28 @@
             </label>
         </div>
 
-        <div class="flex items-center justify-end mt-4">
+        <div class="flex items-center justify-end ">
             @if (Route::has('password.request'))
-            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 "
                 href="{{ route('password.request') }}">
                 {{ __('Forgot your password?') }}
             </a>
             @endif
-
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
         </div>
+
+        <x-primary-button class="ms-3 mt-6 d-flex justify-content-center align-items-center "
+            style="width: 380px; height: 40px; ">
+            <div class="text-center">
+                {{ __('Log in') }}
+            </div>
+        </x-primary-button>
+
+        <a href="{{ route('register') }}">
+            <h4 style="display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center; margin-top:50px; color:black; ">Sign Up </h4>
+        </a>
     </form>
+
 </x-tenant-guest-layout>
