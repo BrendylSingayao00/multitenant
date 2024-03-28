@@ -18,6 +18,8 @@ class UserController extends Controller
         $users = User::with('roles')->get();
         
         return view('app.users.index', ['users'=>$users]);
+
+        
     }
 
     /**

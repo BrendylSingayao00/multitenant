@@ -6,7 +6,7 @@
         @csrf
 
         <!-- Email Address -->
-        <div style="margin:5px;">
+        <div style="margin:5px; " class="baby">
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" class="block mt-1 inputForm" type="email" name="email" :value="old('email')"
                 required autofocus autocomplete="username" />
